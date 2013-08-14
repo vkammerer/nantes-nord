@@ -1,0 +1,30 @@
+{
+  "name": "nantes_nord",
+  "version": "0.1.0",
+  "description": "Website for a web documentary about nantes nord citizen",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nielk/nantes-nord.git"
+  },
+  "keywords": [
+    "nantes",
+    "nord",
+    "html5",
+    "css3",
+    "bootstrap",
+    "alexandre",
+    "oger"
+  ],
+  "author": "Oger Alexandre",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/nielk/nantes-nord/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}
