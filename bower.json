@@ -1,0 +1,17 @@
+{
+  "name": "nantes-nord",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "angular": "~1.0.7",
+    "bootstrap": "~3.0.0-rc1",
+    "jquery": "~2.0.3"
+  }
+}
