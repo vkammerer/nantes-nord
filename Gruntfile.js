@@ -101,7 +101,7 @@ module.exports = function(grunt) {
             tasks: ['devFlag','index']
           },
           css: {
-            files: ['<%= src.path %>/assets/css/*'],
+            files: ['<%= src.path %>/assets/styles/*'],
             tasks: ['copy:cssDev']
           },
           js: {
