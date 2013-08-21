@@ -13,6 +13,9 @@
 @font-face {
   font-family: 'Magritte';
   src: url('/assets/fonts/Little Days Alt.ttf');
+}
+
+@font-face {
   font-family: 'Ipsum';
   src: url('/assets/fonts/BLOKKRegular.ttf');
 }
