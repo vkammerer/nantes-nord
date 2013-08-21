@@ -10,8 +10,14 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/styles/main.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <% if (grunt.config.get('dev')) {%>
+          <link rel="stylesheet" href="assets/styles/main.css">
+        <%}%>
+        <% if (grunt.config.get('prod')) {%>
+          <link rel="stylesheet" href="assets/styles/main.min.css">
+        <%}%>
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -21,7 +27,7 @@
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
         <div class="container">
             <div class="row">
-              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.test</div>
               <div class="col-md-1">.col-md-1</div>
               <div class="col-md-1">.col-md-1</div>
               <div class="col-md-1">.col-md-1</div>
@@ -50,17 +56,22 @@
         </div> <!-- /container -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../bower_components/jquery/jquery.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
 
-        <script src="../bower_components/modernizr/modernizr.js"></script>
+        <script src="assets/vendor/modernizr.js"></script>
 
-        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
         
-        <script src="../bower_components/angular/angular.min.js"></script>
-        
-        <script src="../bower_components/SuperScrollorama/js/jquery.superscrollorama.js"></script>
+        <script src="assets/vendor/jquery.superscrollorama.js"></script>
 
-        <script src="./assets/js/main.js"></script>
+        <% if (grunt.config.get('dev')) {%>
+          <script src="./assets/js/main.js"></script>
+          <script src="http://localhost:35729/livereload.js"></script>
+        <%}%>
+
+        <% if (grunt.config.get('prod')) {%>
+          <script src="./assets/js/main.min.js"></script>
+        <%}%>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
