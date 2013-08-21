@@ -12,12 +12,12 @@
 
 @font-face {
   font-family: 'Magritte';
-  src: url('/assets/fonts/Little Days Alt.ttf');
+  src: url('../fonts/Little Days Alt.ttf');
 }
 
 @font-face {
   font-family: 'Ipsum';
-  src: url('/assets/fonts/BLOKKRegular.ttf');
+  src: url('../fonts/BLOKKRegular.ttf');
 }
 
 /* temporaire css pour dev */
