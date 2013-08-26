@@ -118,10 +118,10 @@ $(document).ready(function() {
         });
 
         controller.addTween('#section01-left', 
-        TweenMax.from($('#section01-left'), .5, {css:{opacity:0, left: -500}}));
+        TweenMax.from($('#section01-left'), .5, {css:{opacity:0, left: -500}, ease:Bounce.easeOut}));
 
         controller.addTween('#section01-right', 
-        TweenMax.from($('#section01-right'), .5, {css:{opacity:0, right: -500}}));
+        TweenMax.from($('#section01-right'), .5, {css:{opacity:0, right: -500}, ease:Bounce.easeOut}));
 
         controller.addTween('#section02-left', 
         TweenMax.from($('#section02-left'), .5, {css:{opacity:0, left: -500}}));
