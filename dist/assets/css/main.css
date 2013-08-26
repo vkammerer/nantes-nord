@@ -136,9 +136,9 @@ li:hover {
 	-webkit-transform: translateY(0%);
 	-moz-transform: translateY(0%);
 	transform: translateY(0%);
-	-webkit-transition: all 0.5s;
+	/*-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
-	transition: all 0.5s;
+	transition: all 0.5s;*/
 }
 
 .nav-header-shrink {
