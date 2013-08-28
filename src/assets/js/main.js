@@ -148,6 +148,11 @@ $(document).ready(function() {
 
 // Scroll menu to section
 $(document).ready(function (){
+            $(".button").click( function(){
+//                alert('hey');
+                $('#section-02').addClass('section-video-hide');
+                $('#section-02-player').addClass('section-video-show');
+            });
             $("#picto1").click(function (){
                 //$(this).animate(function(){
                     $('html, body').animate({
@@ -207,3 +212,33 @@ $(document).ready(function (){
         });
 
 // /Scroll menu to section
+
+
+/* Slide Animation */
+$(document).ready(function() {
+    var i = true;
+    $('.btn-transition-01').click(function() {
+        if(i){
+            $('.section-texte-01').addClass('hide-section');
+            $('.section-video-01').addClass('show-section');
+            i = false;
+        } else {
+            $('.section-texte-01').removeClass('hide-section');
+            $('.section-video-01').removeClass('show-section');
+            i = true;
+        }
+    });
+    var j = true
+    $('.btn-transition-02').click(function() {
+        if(j){
+            $('.section-texte-02').first().addClass('hide-section');
+            $('.section-video-02').first().addClass('show-section');
+            j = false;
+        } else {
+            $('.section-texte-02').first().removeClass('hide-section');
+            $('.section-video-02').first().removeClass('show-section');
+            j = true;
+        }
+    });
+});
+/* FIN Slide Animation */
