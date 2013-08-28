@@ -13,6 +13,7 @@ module.exports = function(grunt) {
       js : '<%= src.assets %>/js',
       css: '<%= src.assets %>/styles',
       fonts: '<%= src.assets %>/fonts',
+      images: '<%= src.assets %>/images',
     },
 
     components: {
@@ -76,6 +77,12 @@ module.exports = function(grunt) {
           src: ['*.ttf'],
           dest: '<%= distDir.fonts %>',
           ext: '.ttf'
+        },
+        img: {
+          expand: true,
+          cwd: '<%= src.images %>',
+          src: ['*.*'],
+          dest: '<%= distDir.images %>'
         },
         cssDev: {
           expand: true,

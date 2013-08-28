@@ -10,9 +10,10 @@
   ],
   "dependencies": {
     "modernizr": "~2.6.2",
-    "angular": "~1.0.7",
     "bootstrap": "~3.0.0-rc1",
     "jquery": "~2.0.3",
     "SuperScrollorama": "master"
+  },
+  "devDependencies": {
   }
 }
