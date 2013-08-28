@@ -107,11 +107,6 @@ if ( typeof define === 'function' && define.amd ) {
 /* Paralax animation */
 $(document).ready(function() {
 
-
-
-
-
-
         var controller = $.superscrollorama({
             triggerAtCenter: true,
             playoutAnimations: true
