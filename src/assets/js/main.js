@@ -216,29 +216,13 @@ $(document).ready(function (){
 
 /* Slide Animation */
 $(document).ready(function() {
-    var i = true;
     $('.btn-transition-01').click(function() {
-        if(i){
-            $('.section-texte-01').addClass('hide-section');
-            $('.section-video-01').addClass('show-section');
-            i = false;
-        } else {
-            $('.section-texte-01').removeClass('hide-section');
-            $('.section-video-01').removeClass('show-section');
-            i = true;
-        }
+        $('.section-texte-01').toggleClass('hide-section');
+        $('.section-video-01').toggleClass('show-section');
     });
-    var j = true
     $('.btn-transition-02').click(function() {
-        if(j){
-            $('.section-texte-02').first().addClass('hide-section');
-            $('.section-video-02').first().addClass('show-section');
-            j = false;
-        } else {
-            $('.section-texte-02').first().removeClass('hide-section');
-            $('.section-video-02').first().removeClass('show-section');
-            j = true;
-        }
+        $('.section-texte-02').toggleClass('hide-section');
+        $('.section-video-02').toggleClass('show-section');
     });
 });
 /* FIN Slide Animation */

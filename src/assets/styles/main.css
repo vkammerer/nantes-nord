@@ -315,6 +315,14 @@ section:nth-child(even) .button {
     transition: all 1s;
 }
 
+#slide-01 {
+    width: 900px;
+    height: 900px;
+    background: url('http://icons.iconarchive.com/icons/danleech/simple/1024/github-icon.png') center 0 no-repeat fixed;
+    background-size: 20%;
+    background-position:left center;
+}
+
 .hide-section {
     -webkit-transform: translateX(-120%);
     -moz-transform: translateX(-120%);

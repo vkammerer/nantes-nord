@@ -38,8 +38,8 @@ module.exports = function(grunt) {
       uglify: {
         minify: {
           expand: true,
-          cwd: '<%= src.js %>',
-          src: ['*.js'],
+          cwd: '<%= distDir.js %>',
+          src: ['main.js'],
           dest: '<%= distDir.js %>',
           ext: '.min.js'
         }
@@ -71,6 +71,10 @@ module.exports = function(grunt) {
           src: '<%= components.bootstrap %>/dist/css/bootstrap.min.css',
           dest: '<%= distDir.css %>/bootstrap.min.css',
         },
+        bootstrap:{
+          src: '<%= components.bootstrap %>/dist/js/bootstrap.min.js',
+          dest: '<%= distDir.vendor %>/bootstrap.min.js',
+        },
         fonts: {
           expand: true,
           cwd: '<%= src.fonts %>',
@@ -90,14 +94,15 @@ module.exports = function(grunt) {
           src: ['*.css'],
           dest: '<%= distDir.css %>',
           ext: '.css'
-        },
-        jsDev: {
-          expand: true,
-          cwd: '<%= src.js %>',
-          src: ['*.js'],
-          dest: '<%= distDir.js %>',
-          ext: '.js'
         }
+        // },
+        // jsDev: {
+        //   expand: true,
+        //   cwd: '<%= src.js %>',
+        //   src: ['*.js'],
+        //   dest: '<%= distDir.js %>',
+        //   ext: '.js'
+        // }
       },
 
       bower: {
@@ -121,8 +126,18 @@ module.exports = function(grunt) {
           },
           js: {
             files: ['<%= src.path %>/assets/js/*'],
-            tasks: ['copy:jsDev']
+            tasks: ['concat:js']
           }
+      },
+
+      concat: {
+        options: {
+          separator: ';'
+        },
+        js: {
+          src: ['<%= src.js %>/*.js'],
+          dest: '<%= distDir.js %>/main.js'
+        }
       }
     
   });
@@ -143,6 +158,7 @@ module.exports = function(grunt) {
       });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -151,7 +167,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower');
 
 
-  grunt.registerTask('build', ['clean:defaults', "jshint", "cssmin", "copy", "bower", "index", "uglify"]);
+  grunt.registerTask('build', ['clean:defaults', "concat", "jshint", "cssmin", "copy", "bower", "index", "uglify"]);
   grunt.registerTask('build-dev', ['devFlag','build']);
   grunt.registerTask('build-prod', ['prodFlag','build']);
 };
