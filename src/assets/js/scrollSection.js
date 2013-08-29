@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    $(".button").click( function(){
+    $('.button').click( function(){
         $('#section-02').addClass('section-video-hide');
         $('#section-02-player').addClass('section-video-show');
     });

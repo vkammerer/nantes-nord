@@ -168,7 +168,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower');
 
 
-  grunt.registerTask('build', ['clean:defaults', "concat", "jshint", "cssmin", "copy", "bower", "index", "uglify"]);
+  grunt.registerTask('build', ['clean:defaults', 'concat', 'jshint', 'cssmin', 'copy', 'bower', 'index', 'uglify']);
   grunt.registerTask('build-dev', ['devFlag','build']);
   grunt.registerTask('build-prod', ['prodFlag','build']);
 };
