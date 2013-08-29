@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   // Permet de configurer les plugins et tâches
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-        
+
     // Configuration du plugin UglifyJS2
     // Les fichiers .js dans le répertoire app/js seront
     // minifiés et concaténés pour produire le fichier
@@ -58,10 +58,11 @@ module.exports = function(grunt) {
 
       clean: {
         defaults: ['<%= distDir.path %>'],
-        postBuild: ['<%= distDir.path %>/tmp']
+        postBuild: ['<%= distDir.path %>/tmp'],
+        js : ['<%= distDir.js %>/main.js']
       },
 
-     
+
       copy: {
         // main: {
         //   src: '<%= src.path %>/index.html',
@@ -126,7 +127,7 @@ module.exports = function(grunt) {
           },
           js: {
             files: ['<%= src.path %>/assets/js/*'],
-            tasks: ['concat:js']
+            tasks: ['clean:js', 'concat:js']
           }
       },
 
@@ -139,7 +140,7 @@ module.exports = function(grunt) {
           dest: '<%= distDir.js %>/main.js'
         }
       }
-    
+
   });
 
 // task to process src/index.html
