@@ -19,6 +19,7 @@ module.exports = function(grunt) {
     components: {
       path: 'bower_components',
       bootstrap: '<%= components.path %>/bootstrap',
+      videojs: '<%= components.path %>/video.js'
     },
 
       jshint: {
@@ -68,6 +69,16 @@ module.exports = function(grunt) {
         //   src: '<%= src.path %>/index.html',
         //   dest: '<%= distDir.path %>/index.html',
         // },
+        fontVideojs: {
+          expand: true,
+          cwd: '<%= components.videojs %>/font',
+          src: ['*.*'],
+          dest: '<%= distDir.fonts %>'
+        },
+        cssVideojs: {
+          src: '<%= components.videojs %>/video-js.css',
+          dest: '<%= distDir.css %>/video-js.css',
+        },
         css: {
           src: '<%= components.bootstrap %>/dist/css/bootstrap.min.css',
           dest: '<%= distDir.css %>/bootstrap.min.css',

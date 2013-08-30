@@ -27,14 +27,17 @@ $(document).ready(function() {
     }
   },false);
 
-});;$(document).ready(function (){
-    $('.button').click( function(){
+});;
+$(document).ready(function (){
+    $(".button").click( function(){
         $('#section-02').addClass('section-video-hide');
         $('#section-02-player').addClass('section-video-show');
     });
+
+    
     var scrollAnimation = function(picto, section) {
         $(picto).click(function (){
-            $('body', 'html').animate({
+            $('body,html').animate({
                 scrollTop: $(section).offset().top-100
             }, 1000);
         });
@@ -42,16 +45,15 @@ $(document).ready(function() {
 
     for(var i=1; i<9; i++) {
         scrollAnimation('#picto'+i, '#section-0'+i);
-        console.log('#picto'+i);
     }
 });;$(document).ready(function() {
-    $('.btn-transition-01').click(function() {
-        $('.section-texte-01').toggleClass('hide-section');
-        $('.section-video-01').toggleClass('show-section');
+    $('.slide-01').click(function() {
+        $(this).toggleClass('hide-section');
+        $(this).parent().find('.slide-02').toggleClass('show-section');
     });
 
-    $('.btn-transition-02').click(function() {
-        $('.section-texte-02').toggleClass('hide-section');
-        $('.section-video-02').toggleClass('show-section');
+    $('.slide-02').click(function() {
+        $(this).parent().find('.slide-01').toggleClass('hide-section');
+        $(this).toggleClass('show-section');
     });
 });

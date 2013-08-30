@@ -15,6 +15,7 @@
     "SuperScrollorama": "master"
   },
   "devDependencies": {
-    "jQuery-Parallax": "https://github.com/IanLunn/jQuery-Parallax.git"
+    "jQuery-Parallax": "https://github.com/IanLunn/jQuery-Parallax.git",
+    "video.js": "~4.1.0"
   }
 }
