@@ -5,11 +5,11 @@ $(document).ready(function (){
         $('#section-02-player').addClass('section-video-show');
     });
 
-    
+
     var scrollAnimation = function(picto, section) {
         $(picto).click(function (){
             $('body,html').animate({
-                scrollTop: $(section).offset().top-100
+                scrollTop: $(section).offset().top - $('html').height() * .1
             }, 1000);
         });
     };
