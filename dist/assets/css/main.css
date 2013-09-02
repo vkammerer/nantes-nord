@@ -115,7 +115,7 @@ nav ul li:hover {
 
 .nav-header {
 	position: fixed;
-	top: 30px;
+	top: 3%;
 	left: 0;
 	opacity: 1;
 	padding: 0;
@@ -142,7 +142,7 @@ nav ul li:hover {
 }
 
 .nav-header-shrink {
-	top: 0px;
+	top: 0%;
 	height: 10%;
 	padding-top: 0px;
 }
@@ -214,7 +214,7 @@ section:nth-child(5) {
 }
 
 section:nth-child(2) {
-    margin-top: 60%;
+    margin-top: 73%;
 	/*background-color: #16A085;*/
 	background-image: -webkit-linear-gradient(38deg, rgb(76, 210, 218), rgb(76, 210, 218) 50%, rgb(90, 218, 226) 50%, rgb(90, 218, 226) 100%);
 	background-image: -moz-linear-gradient(38deg, rgb(76, 210, 218), rgb(76, 210, 218) 50%, rgb(90, 218, 226) 50%, rgb(90, 218, 226) 100%);
@@ -222,7 +222,7 @@ section:nth-child(2) {
 }
 
 section:nth-child(1) {
-    margin-top: 60%;
+    margin-top: 73%;
 	/*background-color: #16A085;*/
 	background-image: -webkit-linear-gradient(38deg, rgb(76, 210, 218), rgb(76, 210, 218) 50%, rgb(90, 218, 226) 50%, rgb(90, 218, 226) 100%);
 	background-image: -moz-linear-gradient(80deg, rgb(76, 210, 218), rgb(76, 210, 218) 50%, rgb(90, 218, 226) 50%, rgb(90, 218, 226) 100%);
