@@ -86,16 +86,18 @@ div[class*="col-"] {
 /* /temporaire css pour dev */
 
 img[id*="picto"] {
-	width: 50px;
-	margin-top: 35px;
+	width: 100px;
+	margin-top: 25px;
 	padding: 0;
 }
 
 footer {
-	background-image: -webkit-linear-gradient(138deg, rgb(41, 41, 39) 50%, rgb(41, 41, 39) 50%, rgb(38, 38, 34) 50%, rgb(41, 41, 39) 100%);
+	/*background-image: -webkit-linear-gradient(138deg, rgb(41, 41, 39) 50%, rgb(41, 41, 39) 50%, rgb(38, 38, 34) 50%, rgb(41, 41, 39) 100%);
 	background-image: -moz-linear-gradient(138deg, rgb(41, 41, 39) 50%, rgb(41, 41, 39) 50%, rgb(38, 38, 34) 50%, rgb(41, 41, 39) 100%);
 	background-image: linear-gradient(138deg, rgb(41, 41, 39) 50%, rgb(41, 41, 39) 50%, rgb(38, 38, 34) 50%, rgb(41, 41, 39) 100%);
-	background-color: #292927;
+	background-color: #292927;*/
+	background-color: rgb(240,240,240);
+	color: #272723;
 	padding: 2em 5em 2em 5em;
 }
 
@@ -196,6 +198,10 @@ nav ul li:hover {
 	top: 0%;
 	height: 10%;
 	padding-top: 0px;
+}
+
+.nav-header-shrink img[id*="picto"] {
+	width: 70px;
 }
 
 nav {
