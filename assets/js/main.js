@@ -44,13 +44,13 @@ $(document).ready(function (){
 
     scrollAnimation('#logo','#section-00');
 });;$(document).ready(function() {
-    $('.slide-01').click(function() {
-        $(this).toggleClass('hide-section');
-        $(this).parent().find('.slide-02').toggleClass('show-section');
+    $('.play_button').click(function() {
+        $(this).parent().parent().parent().toggleClass('hide-section');
+        $(this).parent().parent().parent().parent().find('.slide-02').toggleClass('show-section');
     });
 
-    $('.slide-02').click(function() {
-        $(this).parent().find('.slide-01').toggleClass('hide-section');
-        $(this).toggleClass('show-section');
+    $('button').click(function() {
+        $(this).parent().parent().parent().parent().find('.slide-01').toggleClass('hide-section');
+        $(this).parent().parent().parent().toggleClass('show-section');
     });
 });
