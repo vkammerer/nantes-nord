@@ -22,13 +22,13 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm) { ... }
-	
+
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md) { ... }
-	
+
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg) { 
-	
+@media (min-width: @screen-lg) {
+
  }
 
 
@@ -310,6 +310,13 @@ section:nth-child(even) .button {
 
 .text-left {
 	text-align: right;
+}
+
+.social {
+	margin-top: 15px;
+}
+.social > .fb-like {
+	margin-right: 3px;
 }
 
 /* Slide animation */
