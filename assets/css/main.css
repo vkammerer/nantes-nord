@@ -131,6 +131,13 @@ h3 {
 	letter-spacing: -1px;
 }
 
+h4 {
+	font-family: 'Holmes';
+	font-weight: 100;
+	font-size: 3em;
+	letter-spacing: -1px;
+}
+
 .img-circle {
 	border: 20px solid white;
 }
@@ -255,7 +262,8 @@ p:first-letter {
 section:nth-child(2) {
 	height: 100%;
 	background-color: #F0EDDE;
-	background-image: linear-gradient(128deg, #F0EDDE 70%, rgba(0, 0, 0, 0) 70%), url('../images/bgsection6.jpg');
+	background-image: linear-gradient(128deg, #F0EDDE 70%, rgba(0, 0, 0, 0) 70%), url('../images/bg-picto.png');
+	background-position: 0% 10%;
 	color: black;
 }
 
@@ -350,6 +358,12 @@ section {
 .text-left {
 	text-align: right;
 }
+
+/*.titre-diagonal {
+	margin-top: -10%;
+	transform:rotate(-52deg);
+	opacity: 0.2;
+}*/
 
 .video-center {
 	position: relative;
