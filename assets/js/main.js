@@ -29,11 +29,6 @@ $(document).ready(function() {
 
 });;
 $(document).ready(function (){
-    $(".button").click( function(){
-        $('#section-02').addClass('section-video-hide');
-        $('#section-02-player').addClass('section-video-show');
-    });
-
 
     var scrollAnimation = function(picto, section) {
         $(picto).click(function (){
@@ -46,6 +41,8 @@ $(document).ready(function (){
     for(var i=1; i<9; i++) {
         scrollAnimation('#picto'+i, '#section-0'+i);
     }
+
+    scrollAnimation('#logo','#section-00');
 });;$(document).ready(function() {
     $('.slide-01').click(function() {
         $(this).toggleClass('hide-section');
