@@ -33,7 +33,7 @@ $(document).ready(function (){
     var scrollAnimation = function(picto, section) {
         $(picto).click(function (){
             $('body,html').animate({
-                scrollTop: $(section).offset().top - $('html').height() * .1
+                scrollTop: $(section).offset().top - $('html').height()
             }, 1000);
         });
     };
@@ -42,6 +42,11 @@ $(document).ready(function (){
         scrollAnimation('#picto'+i, '#section-0'+i);
     }
 
+    for(var i=1; i<9; i++) {
+        scrollAnimation('#picto-min-'+i, '#section-0'+i);
+    }
+
+    scrollAnimation('#top','.container');
     scrollAnimation('#logo','#section-00');
 });;$(document).ready(function() {
     $('.play_button').click(function() {
