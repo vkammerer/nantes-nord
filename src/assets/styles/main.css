@@ -67,37 +67,15 @@ section {
 	min-height: 100% !important;
 	height: 100% !important;
 }
-
-
 }
 
-/* IPAD */
+/* Smartphones (portrait) ----------- OK */
 @media only screen 
-and (min-width : 768px)
-and (max-width : 1024px) {
+and (min-width : 768px) {
 /* Styles */
 section {
 	padding: 15% 4% 4% 4% ;
 }
-
-nav ul li {
-	width: 15% !important;
-	margin-left: -20px !important;
-}
-
-#logo {
-	margin-top: -15px !important;
-}
-
-#vlipp-logo {
-	width: 10% !important;
-	margin-top: -8% !important;
-}
-
-.nav-header-shrink #logo {
-	width: 180px !important;
-}
-
 }
 
 /* iPads (landscape) ----------- */
@@ -157,7 +135,7 @@ body {
 	font-family: 'Quicksand', Verdana, sans-serif;
 	color: #EBE8DA;
     /*background-image: url('../images/bg.jpg');*/
-    background-color: #F0EDDE;
+    background-color: yellow;
     background-attachment:fixed;
 }
 
@@ -239,12 +217,6 @@ h4 {
 	font-weight: 100;
 	font-size: 3em;
 	letter-spacing: -1px;
-}
-
-#head-bg {
-	width: 60%;
-	height: 100%;
-	background-image: url('../images/bg-head.png');
 }
 
 .img-circle {
@@ -426,7 +398,6 @@ p:first-letter {
 	width: 100%;
     height: 100%;
 }
-
 
 
 /* illustration accueil */
