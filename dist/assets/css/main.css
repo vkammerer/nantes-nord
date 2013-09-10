@@ -17,109 +17,6 @@
   src: url('../fonts/Holmes207.ttf');
 }
 
-/* Extra small devices (phones, up to 480px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) */
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 300px) 
-and (max-device-width : 480px) {
-/* Styles */
-	section {
-	padding: 5% 4% 4% 4%;
-}
-
-
-
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 320px) {
-/* Styles */
-section {
-	padding: 5% 4% 4% 4% ;
-	min-height: 90% !important;
-	height: 90% !important;
-}
-
-#video-player {
-	height: 200px;
-}
-
-.player-left {
-	margin-right: 30% !important;
-}
-
-h2 {
-	font-family: 'Holmes';
-	font-size: 2em;
-}
-}
-
-/* Smartphones (portrait) ----------- OK */
-@media only screen 
-and (max-width : 767px) {
-/* Styles */
-section {
-	padding: 5% 4% 4% 4% ;
-	min-height: 100% !important;
-	height: 100% !important;
-}
-}
-
-/* Smartphones (portrait) ----------- OK */
-@media only screen 
-and (min-width : 768px) {
-/* Styles */
-section {
-	padding: 15% 4% 4% 4% ;
-}
-}
-
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1024px) {
-/* Styles */
-h2 {
-	font-family: 'Holmes';
-	font-size: 3em;
-}
-}
-
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
-h2 {
-	font-family: 'Holmes';
-	font-size: 4em;
-}
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-}
 
 a, a:hover {
 	text-decoration: none;
@@ -538,7 +435,7 @@ section {
 	height: 100%;
   	display: table-cell;
   	vertical-align: middle;
-  	overflow: hidden;
+  	overflow-x: hidden;
 }
 
 .slide {
@@ -575,3 +472,58 @@ section {
 }
 
 /* FIN Slide animation */
+
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+
+@media (max-width: 320px) {  }
+
+/* Small devices (tablets, 768px) */
+@media (max-width: 768px) {  }
+
+/* Medium devices (desktops, 992px) */
+@media (max-width: 992px) { 
+	section {
+		background-color: yellow;
+		padding-top: 20% !important;
+	}
+
+	.texte-illustration {
+		margin-top: 20%;
+		margin-left: 10%;
+	}
+
+	#logo {
+		margin-top: 7px;
+		margin-left: -10px;
+	}
+
+	#vlipp-logo {
+		margin-top: 20px;
+	}
+
+	nav {
+		margin-top: -12px;
+		margin-left: -20px;
+	}
+
+	nav ul li {
+	display: inline;
+	width: 15%;
+	padding: 0;
+	margin-left: -10px;
+	margin-right: -10px;
+	}
+
+	#video-player {
+		margin-top: -40px;
+	}
+}
+
+/* Large devices (large desktops, 1200px) */
+@media (max-width: 1200px) { 
+	section {
+		background-color: green;
+		padding-top: 15%;
+	}
+}
