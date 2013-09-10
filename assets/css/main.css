@@ -519,13 +519,42 @@ section {
 		padding-top: 50px;
 		margin-left: -60px;
 		max-width: 200px;
+		font-size: 1.3em;
 	}
 	section {
 		height: 100%;
+		text-align: justify;
+		padding-right: 25px;
+		font-size: 0.9em !important;
+	}
+	section h2 {
+		text-align: left;
 	}
 
 	.picto-mini {
 		width: 90px;
+	}
+
+	.texte {	
+		text-align: justify;
+	}
+
+	#video-player {
+		width: 200px;
+		height: 200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.btn-circle {
+		margin-top: 50px;
+		margin-left: 70px;
+		margin-right: auto;
+	}
+
+	.social {
+		margin-top: 30px;
+		margin-left: 80px;
 	}
 }
 
