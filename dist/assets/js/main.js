@@ -55,6 +55,8 @@ $(document).ready(function (){
     }
 
     scrollAnimation('#logo','#section-00');
+
+    scrollAnimation('#scroll-top', '.container');
 });;$(document).ready(function() {
     $('.play_button').click(function() {
         $(this).parent().parent().parent().toggleClass('hide-section');

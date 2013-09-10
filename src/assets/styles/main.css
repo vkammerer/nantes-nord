@@ -458,6 +458,26 @@ section {
 	float: right;
 }
 
+#video-player {
+	margin-top: -60px;
+}
+
+
+#scroll-top {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 10px;
+	right: 10px;
+	border-radius: 100px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 2.5em;
+	background-color: black;
+	opacity: 0.4;
+	cursor: pointer;
+}
+
 /* Slide animation */
 
 /* contient les deux sections et garde la fenêtre à la bonne taille */
@@ -511,7 +531,7 @@ section {
 
 @media (max-width: 420px) {
 	.play_button {
-		margin-top: -70px;
+		margin-top: -20px;
 	}
 
 	#logo {
@@ -519,13 +539,43 @@ section {
 		padding-top: 50px;
 		margin-left: -60px;
 		max-width: 200px;
+		font-size: 1.3em;
 	}
 	section {
 		height: 100%;
+		text-align: justify;
+		padding-right: 25px;
+		font-size: 0.9em !important;
+	}
+	section h2 {
+		text-align: left;
 	}
 
 	.picto-mini {
 		width: 90px;
+	}
+
+	.texte {	
+		text-align: justify;
+	}
+
+	#video-player {
+		width: 200px;
+		height: 200px;
+		margin-top: 20px !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.btn-circle {
+		margin-top: 35px;
+		margin-left: 70px;
+		margin-right: auto;
+	}
+
+	.social {
+		margin-top: 30px;
+		margin-left: 80px;
 	}
 }
 
@@ -597,5 +647,32 @@ section {
 @media (max-width: 1200px) { 
 	section {
 		padding-top: 25% !important;
+	}
+
+	#video-player {
+		margin-top: -80px;
+	}
+
+	#vlipp-logo {
+		margin-top: 30px;
+	}
+
+	#logo {
+		min-width: 200px;
+		margin-top: 20px;
+		margin-left: 5px;
+	}
+
+	nav {
+		margin-left: -20px;
+	}
+
+	nav ul li {
+		display: inline;
+		width: 15%;
+		padding: 0;
+		margin-top: 5%;
+		margin-left: -10px;
+		margin-right: -10px;
 	}
 }

@@ -26,4 +26,6 @@ $(document).ready(function (){
     }
 
     scrollAnimation('#logo','#section-00');
+
+    scrollAnimation('#scroll-top', '.container');
 });
