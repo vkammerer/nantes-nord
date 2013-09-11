@@ -600,7 +600,7 @@ section {
 	}
 }
 
-@media (max-width: 420px) and (orientation:landscape) {
+@media (max-width: 480px) and (orientation:landscape) {
 	.nav-header-phone-landscape {
 		display: block !important;
 	}
