@@ -54,6 +54,10 @@ $(document).ready(function (){
         scrollAnimation('#picto-min-'+i, '#section-0'+i);
     }
 
+    for(var i=1; i<9; i++) {
+        scrollAnimation('#picto-min-landscape-'+i, '#section-0'+i);
+    }
+    
     scrollAnimation('#logo','#section-00');
 
     scrollAnimation('#scroll-top', '.container');
