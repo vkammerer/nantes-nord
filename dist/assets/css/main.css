@@ -608,6 +608,10 @@ section {
 	.nav-header-phone-portrait {
 		display: none !important;
 	}
+
+	section {
+		padding-top: 50px;
+	}
 }
 
 @media (max-width: 480px) {
