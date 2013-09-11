@@ -656,6 +656,7 @@ section {
 		margin-left: 80px;
 	}
 
+<<<<<<< HEAD
 	.play_button {
 		font-size: 1em !important;
 		background-size: 150px 150px;
@@ -665,6 +666,39 @@ section {
 		margin-top: -70px !important;
 		min-height: 150px;
 	}
+=======
+/* Small devices (tablets, 768px) */
+@media (max-width: 768px) { 
+	#logo {
+		margin-top: -105px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		height: 130px;
+		width: 360px;
+	}
+	
+	.texte-illustration {
+		margin-top: -10% !important;
+		margin-left: 10%;
+	}
+
+	.picto-mini {
+		width: 90px;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+	section {
+		font-size: 1.4em;
+		height: 100%;
+	}
+
+	#container-nav {
+	height: 100%;
+	}
+>>>>>>> 6bf58b38f111e508a004ea5d1cc27a2e56c1c189
 }
 
 /* Medium devices (desktops, 992px) */
