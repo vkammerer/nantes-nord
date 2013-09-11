@@ -529,6 +529,46 @@ section {
 /* Extra small devices (phones, up to 480px) */
 /* No media query since this is the default in Bootstrap */
 
+
+/* Small devices (tablets, 768px) */
+@media (max-width: 768px) { 
+	#logo {
+		margin-top: -105px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		height: 130px;
+		width: 360px;
+	}
+	
+	.texte-illustration {
+		margin-top: -10% !important;
+		margin-left: 10%;
+		padding-right: 10%;
+	}
+
+	.picto-mini {
+		width: 90px;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+	section {
+		font-size: 1.4em;
+		height: 100%;
+	}
+
+	#container-nav {
+		height: 100%;
+	}
+
+	.play_button {
+		font-size: 0.7em !important;
+	}
+}
+
+
 @media (max-width: 420px) {
 	.play_button {
 		margin-top: -20px;
@@ -577,38 +617,15 @@ section {
 		margin-top: 30px;
 		margin-left: 80px;
 	}
-}
 
-/* Small devices (tablets, 768px) */
-@media (max-width: 768px) { 
-	#logo {
-		margin-top: -105px !important;
-		margin-left: auto !important;
-		margin-right: auto !important;
-		height: 130px;
-		width: 360px;
-	}
-	
-	.texte-illustration {
-		margin-top: -10% !important;
-		margin-left: 10%;
-	}
-
-	.picto-mini {
-		width: 90px;
-	}
-
-	h2 {
-		font-size: 2em;
-	}
-
-	section {
-		font-size: 1.4em;
-		height: 100%;
-	}
-
-	#container-nav {
-	height: 100%;
+	.play_button {
+		font-size: 1em !important;
+		background-size: 150px 150px;
+		width: 150px;
+		height: 150px;
+		padding-top: -90px !important;
+		margin-top: -70px !important;
+		min-height: 150px;
 	}
 }
 
@@ -629,7 +646,7 @@ section {
 	}
 
 	#vlipp-logo {
-		margin-top: 20px;
+		margin-top: -60px !important;
 	}
 
 	nav {
