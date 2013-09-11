@@ -620,7 +620,7 @@ section {
 
 @media (max-width: 480px) {
 	.play_button {
-		margin-top: -20px;
+		margin-top: 50px;
 	}
 
 	#logo {
