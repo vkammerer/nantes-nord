@@ -610,7 +610,11 @@ section {
 	}
 
 	section {
-		padding-top: 50px;
+		min-height: 320px !important;
+	}
+
+	.slide-01 {
+		margin-top: -50px;
 	}
 }
 
