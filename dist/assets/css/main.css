@@ -601,12 +601,16 @@ section {
 @media (max-width: 1024px) and (orientation:landscape) {
 	.nav-header-phone-landscape {
 		display: block !important;
+<<<<<<< HEAD
 		min-height: 130%;
 	}
 
 	#logo {
 		margin-top: 0px;
 		margin-bottom: -40px;
+=======
+		min-height: 280px !important;
+>>>>>>> 9cf680e75e084fb09640914c14709c83a077487b
 	}
 
 	.nav-header-phone-portrait {
@@ -624,7 +628,15 @@ section {
 	}
 
 	.slide-01 {
-		margin-top: -20px;
+		margin-top: 20px;
+	}
+
+	.play_button {
+		margin-top: 0px !important;
+	}
+
+	.texte-illustration {
+		margin-top: 120px !important;
 	}
 }
 
@@ -638,6 +650,7 @@ section {
 	}
 
 	.play_button {
+<<<<<<< HEAD
 		margin-top: -7px;
 		background-size: 160px 160px;
 		margin-bottom: -50px;
@@ -649,8 +662,30 @@ section {
 		margin-top: -30px !important;
 		margin-bottom: -60px !important;
 		max-width: 280px;
+=======
+		margin-top: 20px;
+		background-size: 180px 180px;
+		height: 180px;
+		width: 180px;
+		margin-bottom: -20px;
+	}
+
+	.nav-header-phone-portrait {
+		min-height: 440px;
+	}
+
+	.texte-illustration {
+		margin-top: 90px !important;
+	}
+
+	#logo {
+		margin-top: -20px !important;
+		margin-bottom: -60px !important;
+		max-width: 480px;
+>>>>>>> 9cf680e75e084fb09640914c14709c83a077487b
 		padding-bottom: -70px !important;
 		font-size: 1em;
+		width: 300px;
 	}
 
 	section {
@@ -691,11 +726,14 @@ section {
 		margin-left: 80px;
 	}
 
+<<<<<<< HEAD
 	.texte-illustration {
 		margin-top: 80px !important;
 		margin-left: 30px !important;
 	}
 }
+=======
+>>>>>>> 9cf680e75e084fb09640914c14709c83a077487b
 
 /* Small devices (tablets, 768px) */
 @media (min-width: 481px) and (max-width: 768px) and (orientation: portrait) { 
@@ -777,7 +815,7 @@ section {
 
 	#logo {
 		min-width: 200px;
-		margin-top: 20px;
+		margin-top: 0px !important;
 		margin-left: 5px;
 	}
 
