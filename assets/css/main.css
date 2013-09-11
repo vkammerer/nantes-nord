@@ -594,6 +594,10 @@ section {
 		margin-left: 10%;
 	}
 
+	.picto-mini {
+		width: 90px;
+	}
+
 	h2 {
 		font-size: 2em;
 	}
@@ -603,6 +607,9 @@ section {
 		height: 100%;
 	}
 
+	#container-nav {
+	height: 100%;
+	}
 }
 
 /* Medium devices (desktops, 992px) */
