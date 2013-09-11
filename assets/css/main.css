@@ -603,6 +603,7 @@ section {
 @media (max-width: 480px) and (orientation:landscape) {
 	.nav-header-phone-landscape {
 		display: block !important;
+		min-height: 320px !important;
 	}
 
 	.nav-header-phone-portrait {
@@ -614,7 +615,15 @@ section {
 	}
 
 	.slide-01 {
-		margin-top: -20px;
+		margin-top: 20px;
+	}
+
+	.play_button {
+		margin-top: 10px !important;
+	}
+
+	.texte-illustration {
+		margin-top: 120px !important;
 	}
 }
 
