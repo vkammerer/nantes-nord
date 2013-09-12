@@ -5,7 +5,7 @@
    ** Classé par odre alphabetique **
    ========================================================================== */
 
-/*@import url(http://fonts.googleapis.com/css?family=Lobster:300,400,700|Sacramento|Dawning+of+a+New+Day|Open+Sans:300,600,400|Quicksand:400,300,700);*/
+@import url(http://fonts.googleapis.com/css?family=Lobster:300,400,700|Sacramento|Dawning+of+a+New+Day|Open+Sans:300,600,400|Quicksand:400,300,700);
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 @font-face {
   font-family: 'Magritte';
@@ -107,9 +107,8 @@ h1 {
 
 
 
-h3 {
+h2, h3 {
 	font-family: 'Holmes';
-	font-weight: 100;
 	font-size: 2em;
 	letter-spacing: -1px;
 }
@@ -613,6 +612,10 @@ section {
 		/*height: 130%;*/
 	}
 
+	img {
+        	width: 130px;
+        }
+
 	.nav-header {
 		display: none !important;
 	}
@@ -621,6 +624,7 @@ section {
 		margin-top: -20px;
 		margin-bottom: -40px;
 		min-height: 90px !important;
+		font-size: 100%;
 	}
 
 	.nav-header-phone-portrait {
@@ -635,7 +639,7 @@ section {
 	section {
 		height: 100% !important;
 		min-height: 320px !important;
-		padding-top: 10px !important;
+		padding-top: 10% !important;
 		font-size: 1em;
 	}
 
@@ -648,8 +652,8 @@ section {
 	}
 
 	.texte-illustration {
-		margin-top: -30px !important;
-		width: 90%;
+		margin-top: 0px !important;
+		width: 80%;
 	}
 
 	#video-player {
@@ -755,12 +759,15 @@ section {
 		margin-top: -10px !important;
 		margin-left: auto !important;
 		margin-right: auto !important;
+		margin-bottom: 30px;
 		height: 130px;
-		width: 360px;
+		width: 200px;
+		font-size: 1em;
 	}
 	
 	.texte-illustration {
-		margin-top: 20% !important;
+		width: 80%;
+		margin-top: 40% !important;
 		margin-left: 30px !important;
 	}
 
@@ -774,11 +781,11 @@ section {
 
 	section {
 		font-size: 1.4em;
-		height: 100%;
+		height: 120%;
 	}
 
 	#container-nav {
-	height: 100%;
+	height: 130% !important;
 	}
 
 	.nav-phone {
@@ -788,6 +795,10 @@ section {
 	.nav-header-phone-portrait {
 		height: 120%;
 		display: block;
+	}
+
+	.play_button {
+		font-size: 0.7em;
 	}
 
 }
@@ -826,7 +837,7 @@ section {
 }
 
 /* Large devices (large desktops, 1200px) */
-@media (min-width: 1024px) and (max-width: 1200px) { 
+@media (min-width: 1025px) and (max-width: 1200px) { 
 	section {
 		padding-top: 20% !important;
 	}
@@ -891,5 +902,16 @@ section {
         /* Votre code ici pour les écrans Retina */
         img {
         	width: 80px;
+        }
+}
+
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 1.3) and (min-width: 1023px),
+    only screen and (min-device-pixel-ratio: 1.3),
+    only screen and (min-resolution: 120dpi) {
+
+        /* Votre code ici pour les écrans Retina */
+        img {
+        	width: 130px;
         }
 }
