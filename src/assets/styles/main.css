@@ -152,7 +152,7 @@ nav ul li:hover {
 }*/
 
 .menu {
-	margin-top: 1%;
+	margin-top: 0%;
 }
 
 .nav-phone {
@@ -218,7 +218,7 @@ nav ul li:hover {
 }
 
 #logo {
-	margin-top: 65px;
+	margin-top: 60px;
 	margin-right: 0px;
 	cursor: pointer;
 }
