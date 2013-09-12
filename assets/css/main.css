@@ -146,21 +146,19 @@ nav ul li:hover {
 	margin-top: 1.5%;
 }
 
-#logo {
-	margin-top: 30px;
-	margin-left: 20px;
-	cursor: pointer;
-}
-
 /*.list-inline li {
 	padding: 0px;
 	margin: 0px;
 }*/
 
+.menu {
+	margin-top: 1%;
+}
+
 .nav-phone {
 	margin-left: auto;
   	margin-right: auto;
-  	height: 80%;
+  	height: 40%;
 }
 
 
@@ -220,8 +218,9 @@ nav ul li:hover {
 }
 
 #logo {
-	margin-top: 45px;
+	margin-top: 65px;
 	margin-right: 0px;
+	cursor: pointer;
 }
 
 .nav-header {
@@ -299,15 +298,6 @@ p:first-letter {
 }
 
 .play_button {
-	/*margin-top: -35%;
-    background-image: url('../images/play.png');
-    background-repeat: no-repeat;
-    width: 120%;
-    background-size: 100% 100%;
-    color: black;
-    padding: 140px 40px 70px 0px;
-    margin-left: 5%;
-    max-width: 100%*/
     position: relative;
     margin-top: 15%;
 /*    background-color: yellow;*/
@@ -482,7 +472,7 @@ section {
 
 #vlipp-logo {
 	width: 6%;
-	margin-top: 50px;
+	margin-top: 75px;
 	margin-right: 10px;
 	float: right;
 }
@@ -870,7 +860,7 @@ section {
 	}
 }
 
-@media (min-width: 1900px) and (max-width: 4000px) {
+/*@media (min-width: 1900px) and (max-width: 4000px) {
 	.nav-header-phone-portrait {
 		display: none !important;
 	}
@@ -890,7 +880,7 @@ section {
 	.texte-illustration {
 		margin-top: 17%;
 	}
-}
+}*/
 
 /* Retina & High resolution device */
 
