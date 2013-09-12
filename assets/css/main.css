@@ -744,7 +744,7 @@ section {
 }
 
 /* Small devices (tablets, 768px) */
-@media (min-width: 0px) and (max-width: 768px) and (orientation: portrait) { 
+@media (min-width: 0px) and (max-width: 1024px) and (orientation: portrait) { 
 	#logo {
 		margin-top: -10px !important;
 		margin-left: auto !important;
