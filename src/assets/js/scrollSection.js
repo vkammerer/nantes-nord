@@ -5,7 +5,7 @@ $(document).ready(function (){
 
     var scrollAnimation = function(picto, section) {
         $(picto).click(function (){
-            if($(window).width()>764) {
+            if($(window).width()>1024) {
             $('body,html').animate({
                 scrollTop: $(section).offset().top - $('html').height() * .1
             }, 1000);
