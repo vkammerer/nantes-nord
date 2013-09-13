@@ -62,13 +62,24 @@ $(document).ready(function (){
 
     scrollAnimation('#scroll-top', '.container');
 });;$(document).ready(function() {
-    $('.play_button').click(function() {
-        $(this).parent().parent().parent().toggleClass('hide-section');
-        $(this).parent().parent().parent().parent().find('.slide-02').toggleClass('show-section');
+    $('.slideButton').click(function() {
+	    var thisSlide1 = $(this).closest('li'); 
+	    var thisSlide2 = thisSlide1.next();
+	    TweenMax.to(thisSlide1, 0.5, {className:"+=slideLeft", onComplete:myFunction});
+			function myFunction() {
+				thisSlide2.show();
+				thisSlide1.hide();
+		    TweenMax.to(thisSlide2, 0.5, {className:"+=slideLeft"});
+			}
     });
-
-    $('button').click(function() {
-        $(this).parent().parent().parent().parent().find('.slide-01').toggleClass('hide-section');
-        $(this).parent().parent().parent().toggleClass('show-section');
+    $('button[type=button]').click(function() {
+	    var thisSlide2 = $(this).closest('li'); 
+	    var thisSlide1 = thisSlide2.prev();
+	    TweenMax.to(thisSlide2, 0.5, {className:"-=slideLeft", onComplete:myFunction});
+			function myFunction() {
+				thisSlide1.show();
+				thisSlide2.hide();
+		    TweenMax.to(thisSlide1, 0.5, {className:"-=slideLeft"});
+			}
     });
 });
