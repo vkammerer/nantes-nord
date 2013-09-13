@@ -66,12 +66,13 @@ body {
 	max-width: 100%;
 }
 
-/*#container-nav {
-	height: 100%;
-}*/
-
 #copyright {
 	margin: 3em 0 0 0;
+}
+
+.centered {
+	display: table-cell;
+	vertical-align: middle;
 }
 
 /* temporaire css pour dev */
@@ -125,10 +126,6 @@ h4 {
 	border: 20px solid white;
 }
 
-/*img[id*="picto"] {
-	margin-top: 30%;
-}*/
-
 nav ul li {
 	display: inline;
 	width: 13%;
@@ -138,19 +135,10 @@ nav ul li {
 	margin-right: -2%;
 }
 
-/*nav ul li {
-	margin-top: 25px;
-}*/
-
 nav ul li:hover {
 	transition: all 0.5s;
 	margin-top: 3.5%;
 }
-
-/*.list-inline li {
-	padding: 0px;
-	margin: 0px;
-}*/
 
 .menu {
 	margin-top: 0%;
@@ -445,11 +433,6 @@ section {
 	/*background-color: orange;*/
 }
 
-.texte-illustration {
-	margin-top: 150px;
-	margin-left: 10%;
-}
-
 .text-left {
 	text-align: right;
 }
@@ -556,13 +539,6 @@ video {
 		margin-right: auto !important;
 		width: 360px;
 	}
-	
-	.texte-illustration {
-		margin-top: -10% !important;
-		margin-left: 10%;
-		padding-right: 10%;
-		/*width: 70% !important;*/
-	}
 
 	.picto-mini {
 		width: 90px;
@@ -617,24 +593,12 @@ video {
 		height: 130%;
 	}
 
-	section {
-		height: 100% !important;
-		min-height: 320px !important;
-		padding-top: 10% !important;
-		font-size: 1em;
-	}
-
 	.slide-01 {
 		margin-top: 20px;
 	}
 
 	.slideButton {
 		margin-top: 0px !important;
-	}
-
-	.texte-illustration {
-		margin-top: 0px !important;
-		width: 80%;
 	}
 
 	#video-player {
@@ -644,7 +608,7 @@ video {
 
 @media (max-width: 360px) and (orientation: portrait) {
 	.nav-header-phone-portrait {
-		height: 120%;
+		height: 100%;
 		display: block;
 	}
 
@@ -675,9 +639,6 @@ video {
 		min-height: 440px;
 	}
 
-	.texte-illustration {
-		margin-top: 90px !important;
-	}
 
 	#logo {
 		margin-top: -20px !important;
@@ -692,8 +653,8 @@ video {
 		height: 120%;
 		text-align: justify;
 		padding-right: 25px;
-		padding-top: 10px !important;
 		font-size: 0.9em !important;
+		padding-left: 45px;
 	}
 	section h2 {
 		text-align: left;
@@ -725,11 +686,6 @@ video {
 		margin-top: 30px;
 		margin-left: 80px;
 	}
-
-	.texte-illustration {
-		margin-top: 80px !important;
-		margin-left: 30px !important;
-	}
 }
 
 
@@ -744,11 +700,6 @@ video {
 		font-size: 1em;
 	}
 	
-	.texte-illustration {
-		width: 80%;
-		margin-top: 40% !important;
-		margin-left: 30px !important;
-	}
 
 	.picto-mini {
 		width: 90px;
@@ -772,7 +723,7 @@ video {
 	}
 
 	.nav-header-phone-portrait {
-		height: 120%;
+		height: 100%;
 		display: block;
 	}
 
@@ -783,22 +734,11 @@ video {
 }
 
 @media (max-width: 992px) and (min-height: 768px) {
-	.texte-illustration {
-		padding-top: -60px !important;
-		margin-left: 30px !important;
-	}
+
 }
 
 
 @media (min-width: 768px) and (max-width: 992px) { 
-	section {
-		padding-top: 15em !important;
-	}
-
-	.texte-illustration {
-		margin-top: 15%;
-		margin-left: 10%;
-	}
 
 	#logo {
 		margin-top: 7px;
@@ -817,9 +757,6 @@ video {
 
 
 @media (min-width: 1025px) and (max-width: 1200px) { 
-	section {
-		padding-top: 20% !important;
-	}
 
 	#video-player {
 		margin-top: -80px;
