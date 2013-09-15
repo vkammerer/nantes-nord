@@ -133,8 +133,8 @@ module.exports = function(grunt) {
             tasks: ['devFlag','index']
           },
           css: {
-            files: ['<%= src.path %>/assets/styles/*'],
-            tasks: ['copy:cssDev']
+            files: ['<%= src.path %>/assets/styles/*.scss'],
+            tasks: ['sass','copy:cssDev']
           },
           js: {
             files: ['<%= src.path %>/assets/js/*'],
@@ -149,6 +149,15 @@ module.exports = function(grunt) {
         js: {
           src: ['<%= src.js %>/*.js'],
           dest: '<%= distDir.js %>/main.js'
+        }
+      },
+
+
+      sass: {
+        dist: {
+          files: {
+            '<%= src.css %>/main.css': '<%= src.css %>/main.scss'
+          }
         }
       }
 
@@ -176,10 +185,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-bower');
 
 
-  grunt.registerTask('build', ['clean:defaults', 'concat', 'jshint', 'cssmin', 'copy', 'bower', 'index', 'uglify']);
+  grunt.registerTask('build', ['clean:defaults', 'sass', 'concat', 'jshint', 'cssmin', 'copy', 'bower', 'index', 'uglify']);
   grunt.registerTask('build-dev', ['devFlag','build']);
   grunt.registerTask('build-prod', ['prodFlag','build']);
 };
