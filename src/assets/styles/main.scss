@@ -1,27 +1,92 @@
-/* test sass */
+//		         _             _                   _           _            _           _        
+//		        /\ \     _    / /\                /\ \     _  /\ \         /\ \        / /\      
+//		       /  \ \   /\_\ / /  \              /  \ \   /\_\\_\ \       /  \ \      / /  \     
+//		      / /\ \ \_/ / // / /\ \            / /\ \ \_/ / //\__ \     / /\ \ \    / / /\ \__  
+//		     / / /\ \___/ // / /\ \ \          / / /\ \___/ // /_ \ \   / / /\ \_\  / / /\ \___\ 
+//		    / / /  \/____// / /  \ \ \        / / /  \/____// / /\ \ \ / /_/_ \/_/  \ \ \ \/___/ 
+//		   / / /    / / // / /___/ /\ \      / / /    / / // / /  \/_// /____/\      \ \ \       
+//		  / / /    / / // / /_____/ /\ \    / / /    / / // / /      / /\____\/  _    \ \ \      
+//		 / / /    / / // /_________/\ \ \  / / /    / / // / /      / / /______ /_/\__/ / /      
+//		/ / /    / / // / /_       __\ \_\/ / /    / / //_/ /      / / /_______\\ \/___/ /       
+//		\/_/     \/_/ \_\___\     /____/_/\/_/     \/_/ \_\/       \/__________/ \_____\/        
+//		         _             _            _          _                                         
+//		        /\ \     _    /\ \         /\ \       /\ \                                       
+//		       /  \ \   /\_\ /  \ \       /  \ \     /  \ \____                                  
+//		      / /\ \ \_/ / // /\ \ \     / /\ \ \   / /\ \_____\                                 
+//		     / / /\ \___/ // / /\ \ \   / / /\ \_\ / / /\/___  /                                 
+//		    / / /  \/____// / /  \ \_\ / / /_/ / // / /   / / /                                  
+//		   / / /    / / // / /   / / // / /__\/ // / /   / / /                                   
+//		  / / /    / / // / /   / / // / /_____// / /   / / /                                    
+//		 / / /    / / // / /___/ / // / /\ \ \  \ \ \__/ / /                                     
+//		/ / /    / / // / /____\/ // / /  \ \ \  \ \___\/ /                                      
+//		\/_/     \/_/ \/_________/ \/_/    \_\/   \/_____/                                       
+//		                                                                                         
 
-/* ==========================================================================
-   Author's custom styles
-   ** Classé par odre alphabetique **
-   ========================================================================== */
+// ==========================================================================
+//	 ** Sass **
+// ==========================================================================
+
+  // Header
+	  $font-header: 'Magritte', Verdana, sans-serif;
+	  $h1: 5em;
+	  $h2: 2em;
+	  $h3: 2em;
+	  $h4: 3em;
+
+  // General
+  	  $font: 'Quicksand', Verdana, sans-serif;
+  	  $font-color: #EBE8DA;
+  	  $font-link: white;
+
+  	  @mixin head-group {
+		font-family: $font-header;
+	  }
+
+  // Gradient background
+  	  @mixin gradient-bg($deg, $color1, $color2, $percent) {
+		background-image: linear-gradient($deg, $color1 $percent, $color1 $percent, $color2 $percent, $color1 100%);
+	}
+
+  // Picto background for each sections
+	@for $i from 1 through 8 {
+	.picto-bg-0#{$i} {
+		background-image: url('../images/picto-bg-0#{$i}.png');
+		background-repeat: no-repeat;
+		background-position: 90% 10%;
+	}
+  
+}
+
+// ==========================================================================
 
 @import url(http://fonts.googleapis.com/css?family=Lobster:300,400,700|Sacramento|Dawning+of+a+New+Day|Open+Sans:300,600,400|Quicksand:400,300,700);
-*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 @font-face {
   font-family: 'Magritte';
   src: url('../fonts/Holmes207.ttf');
 }
-
 @font-face {
   font-family: 'Holmes';
   src: url('../fonts/Holmes207.ttf');
   /*src: url('../fonts/Lobster.ttf');*/
 }
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/* temporaire css pour dev */
+div[class*="col-"] {
+	border: 0px dashed blue;
+}
+/* /temporaire css pour dev */
+div[class*="row"] {
+	border: 0px dashed yellow;
+}
 
 
-a, a:hover {
-	text-decoration: none;
-	color: white;
+a {
+	color: $font-link;
+	&:hover {
+		color: darken($font-link,30%);
+		text-decoration: none;
+		transition: all 0.5s;
+	}
 }
 
 html, body {
@@ -29,10 +94,8 @@ html, body {
 }
 
 body {
-	/*font-family: 'Ipsum', Verdana, sans-serif;*/
-	font-family: 'Quicksand', Verdana, sans-serif;
-	color: #EBE8DA;
-    /*background-image: url('../images/bg.jpg');*/
+	font-family: $font;
+	color: $font-color;
     background-attachment:fixed;
 }
 
@@ -52,7 +115,6 @@ body {
 	border: 0;
 	border-radius: 90px;
 	margin-top: 20px;
-	/*margin-right: auto;*/
 	margin-left: 42%;
 	width: 70px;
 	height: 70px;
@@ -75,55 +137,38 @@ body {
 	vertical-align: middle;
 }
 
-/* temporaire css pour dev */
-div[class*="col-"] {
-	border: 0px dashed blue;
-}
-/* /temporaire css pour dev */
-
-div[class*="row"] {
-	border: 0px dashed yellow;
-}
-
 footer {
-	background-image: linear-gradient(138deg, rgb(41, 41, 39) 80%, rgb(41, 41, 39) 80%, rgb(38, 38, 34) 80%, rgb(41, 41, 39) 100%);
+	@include gradient-bg(138deg,rgb(41,41,39),rgb(38,38,34),80%);
 	padding: 2em 5em 2em 5em;
-}
-
-.footer-list li {
-	list-style: none;
 }
 
 .footer-list {
 	margin: 0;
 	padding: 0;
 	letter-spacing: -1px;
+	li {
+		list-style: none;
+	}
 }
 
 h1 {
-	font-family: 'Holmes', Verdana, sans-serif;
+	@include head-group;
 	font-weight: 400;
-	font-size: 5em;
+	font-size: $h1;
 	margin-top: 5px;
 }
 
-
-
 h2, h3 {
-	font-family: 'Holmes';
-	font-size: 2em;
+	@include head-group;
+	font-size: $h2;
 	letter-spacing: -1px;
 }
 
 h4 {
-	font-family: 'Holmes';
+	@include head-group;
 	font-weight: 100;
-	font-size: 3em;
+	font-size: $h4;
 	letter-spacing: -1px;
-}
-
-.img-circle {
-	border: 20px solid white;
 }
 
 nav ul li {
@@ -133,11 +178,10 @@ nav ul li {
 	float:left;
 	margin-top: 40px;
 	margin-right: -2%;
-}
-
-nav ul li:hover {
-	transition: all 0.5s;
-	margin-top: 3.5%;
+	&:hover {
+		transition: all 0.5s;
+		margin-top: 3.5%;
+	}
 }
 
 .menu {
@@ -149,8 +193,6 @@ nav ul li:hover {
   	margin-right: auto;
   	height: 40%;
 }
-
-
 
 .nav-header-phone-portrait {
 	display: none;
@@ -199,11 +241,7 @@ nav ul li:hover {
 
 #nantes {
 	font-size: 1.8em;
-	font-family: 'Holmes';
-}
-
-.nav-header-shrink nav {
-	margin-top: -40px;
+	font-family: $font-header;
 }
 
 #logo {
@@ -241,19 +279,19 @@ nav ul li:hover {
 	top: 0%;
 	height: 10%;
 	padding-top: 0px;
-}
-
-.nav-header-shrink img[id*="picto"] {
-	width: 70px;
-}
-
-.nav-header-shrink #logo {
-	margin-top: 5px;
-}
-
-.nav-header-shrink #vlipp-logo {
-	width: 6%;
-	margin-top: 1%;
+	nav {
+		margin-top: -40px;
+	}
+	img[id*="picto"] {
+		width: 70px;
+	}
+	#logo {
+		margin-top: 5px;
+	}
+	#vlipp-logo {
+		width: 6%;
+		margin-top: 1%;
+	}
 }
 
 nav {
@@ -264,32 +302,31 @@ nav {
 p {
 	padding: 2em 4em 0em 1em;
 	font-size: 1.2em;
+	&:first-letter {
+		font-size: 3em;
+	}
 }
 
-p:first-letter {
-	font-size: 3em;
-}
 
-.play-right {
+@mixin play-button {
 	margin-top: 0%;
-	margin-left: 0%;
 	cursor: pointer;
 	width: 220px;
     height: 100%;
+}
+.play-right {
+	@include play-button;
+	margin-left: 5%;
 }
 
 .play-left {
-	margin-top: 0%;
+	@include play-button;
 	margin-right: 5%;
-	cursor: pointer;
-	width: 220px;
-    height: 100%;
 }
 
 .slideButton {
     position: relative;
     margin-top: 15%;
-/*    background-color: yellow;*/
     background-image: url('../images/play.png');
     background-repeat: no-repeat;
     background-size: 200px 200px;
@@ -301,45 +338,20 @@ p:first-letter {
     color: black;
 } 
 
-.picto-bg-01 {
-	background-image: url('../images/picto-horloge.png');
-	background-repeat: no-repeat;
-	background-position: 90% 10%;
-}
-
-.picto-bg-02 {
-	background-image: url('../images/picto-photo.png');
-	background-repeat: no-repeat;
-	background-position: 0% 10%;
-}
-
-.picto-bg-03 {
-	background-image: url('../images/picto-piano.png');
-	background-repeat: no-repeat;
-	background-position: 90% 10%;
-}
-
-.picto-bg-04 {
-	background-image: url('../images/picto-robe.png');
-	background-repeat: no-repeat;
-	background-position: 0% 10%;
-}
-
 .picto-mini {
 	cursor: pointer;
 }
 
-.row {
-	width: 100%;
-    height: 100%;
+@mixin section-bg($deg, $color, $number, $percent: 70%) {
+	background-color: $color;
+	background-image: linear-gradient($deg, rgba(0, 0, 0, 0) 40%,  $color 40%), url('../images/bgsection-0#{$number}.jpg');
 }
-
 
 /* illustration accueil */
 section:nth-child(2) {
-	height: 100%;
 	background-color: #F0EDDE;
-	background-image: linear-gradient(128deg, #F0EDDE 70%, rgba(0, 0, 0, 0) 70%), url('../images/bg-picto.png');
+	background-image: linear-gradient(128deg, #F0EDDE 70%, rgba(0, 0, 0, 0) 70%), url('../images/bgsection-00.png');
+	height: 100%;
 	background-position: 0% 10%;
 	color: black;
 }
