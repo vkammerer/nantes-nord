@@ -307,7 +307,6 @@ p {
 	margin-top: 0%;
 	cursor: pointer;
 	width: 220px;
-    height: 100%;
 }
 .play-right {
 	@include play-button;
@@ -410,16 +409,6 @@ section:nth-child(10) {
 }
 
 
-section {
-	display: table;
-	min-height: 90%;
-	height: 90%;
-	width: 100%;
-	z-index: 1005;
-	overflow: hidden;
-}
-
-
 #slogan {
 	font-family: 'Holmes', cursive;
 	font-size: 1em;
@@ -493,36 +482,52 @@ section {
 
 /* contient les deux sections et garde la fenêtre à la bonne taille */
 
-.container-slide {
-	/*background-color: yellow;*/
+section {
+	min-height: 90%;
+	height: 90%;
 	width: 100%;
-	height: 100%;
-	display: table-cell;
-	vertical-align: middle;
+	z-index: 1005;
+	overflow: hidden;
 
-}
+	.slide {
+		width: 200%;
+		height:100%;
+		padding:0;
+		margin:0;
+		list-style-type: none;
+	  transition: all 400ms linear;
 
-.slide {
-	list-style: none;
-	width: 100%;
-	display: inline;
-}
-.slide-01.slideLeft {
-	opacity: 0;
-  transform: translate3d(-100%,0,0);
-}
-.slide-02 {
-	display:none;
-  opacity: 0;
-  transform: translate3d(100%,0,0);
-}
-.slide-02.slideLeft {
-  opacity: 1;
-  transform: translate3d(0,0,0);
+		li {
+			display: table;
+			height:100%;
+			width:50%;
+			float:left;
 
+			.row {
+				display: table-cell;
+				vertical-align: middle;
+				width:100%;
+
+				video {
+					opacity:0;
+				}
+			}
+		}
+	}
 }
-video {
-	opacity:0;
+.csstransforms3d {
+	 .slided {
+	  transform: translate3d(-50%,0,0);
+	}
+}
+.no-csstransforms3d {
+	.slide {
+	  position: absolute;
+	  left:0;
+		&.slided {
+		  left:-100%;
+		}
+	}
 }
 
 /* FIN Slide animation */
